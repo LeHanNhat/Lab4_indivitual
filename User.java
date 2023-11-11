@@ -10,12 +10,44 @@ public class User{
         LeaseStatus = leaseStatus;
         LeaseTerms = leaseTerms;
     }
-    
-    public void createRentalContract(){
+     public void createRentalContract(){
 
     }
     public void TerminateRentalContract(){
 
     }
+    public String getLeaseDetail() {
+        return LeaseDetail;
+    }
+
+    public void setLeaseDetail(String leaseDetail) {
+        LeaseDetail = leaseDetail;
+    }
+
+    public String getPropertyDetails() {
+        return PropertyDetails;
+    }
+
+    public void setPropertyDetails(String propertyDetails) {
+        PropertyDetails = propertyDetails;
+    }
+
+    public String getLeaseStatus() {
+        return LeaseStatus;
+    }
+
+    public void setLeaseStatus(String leaseStatus) {
+        LeaseStatus = leaseStatus;
+    }
+
+    public String getLeaseTerms() {
+        return LeaseTerms;
+    }
+
+    public void setLeaseTerms(String leaseTerms) {
+        LeaseTerms = leaseTerms;
+    }
+
+   
 
 }
