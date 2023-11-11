@@ -12,7 +12,7 @@ public class Tenant{
     }
 
     public void createRentalContract(){
-        
+        System.out.println();
     }
     public void TerminateRentalContract(){
 
