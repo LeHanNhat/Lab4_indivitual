@@ -1,9 +1,12 @@
+import java.util.ArrayList;
+import java.util.*;
 public class Tenant{
     private String LeaseDetail;
     private String PropertyDetails;
     private String LeaseStatus; 
     private String LeaseTerms;
-    
+    private List<RentalContract_Lease> RentalContract_Lease_List=new ArrayList<>();
+    private Hashtable<String,RentalContract_Lease>RentalContract_Lease_map=new Hashtable(); 
     public Tenant(String leaseDetail, String propertyDetails, String leaseStatus, String leaseTerms) {
         LeaseDetail = leaseDetail;
         PropertyDetails = propertyDetails;
@@ -11,11 +14,13 @@ public class Tenant{
         LeaseTerms = leaseTerms;
     }
 
-    public void createRentalContract(){
-        System.out.println();
+    public void createRentalContract(String contractID, String propertyID, String tenantID, String startDate, String endDate, double rentAmount){
+      RentalContract_Lease rentalcontract= new RentalContract_Lease(LeaseDetail, PropertyDetails, LeaseTerms, LeaseStatus, LeaseDetail, 0)
+       RentalContract_Lease_List.add(rentalcontract);
+       RentalContract_Lease_map.put(rentalcontract.getContractID(), rentalcontract);
     }
-    public void TerminateRentalContract(){
-
+    public void TerminateRentalContract(String contractID){
+        RentalContract_Lease_List.remove(RentalContract_Lease_map.get(contractID));
     }
     public String getLeaseDetail() {
         return LeaseDetail;
